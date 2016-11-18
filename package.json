@@ -1,0 +1,20 @@
+{
+  "name": "wsuwp-youtube-embed",
+  "description": "Embed YouTube videos using the YouTube JS API",
+  "version": "0.0.1",
+  "license": "GPL-2.0+",
+  "author": "Washington State University",
+  "contributors": [
+    { "name": "jeremyfelt" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/washingtonstateuniversity/wsuwp-plugin-youtube-embed"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-phpcs": "^0.4.0"
+  }
+}
