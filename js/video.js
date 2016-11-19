@@ -35,7 +35,7 @@
 				video_showinfo = $( this ).data( "video-showinfo" ),
 				video_start = $( this ).data( "video-start" );
 
-			new YT.Player( "youtube-player-" + video_id, {
+			new YT.Player( "wsuwp-youtube-video-" + video_id, {
 				height: video_height,
 				width: video_width,
 				videoId: video_id,

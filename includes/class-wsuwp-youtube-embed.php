@@ -93,7 +93,7 @@ class WSUWP_YouTube_Embed {
 		$content = ob_get_contents();
 		ob_end_clean();
 
-		wp_enqueue_script( 'wsuwp-youtube-embed', plugins_url( '/js/video.min.js', __FILE__ ), array( 'jquery' ), $this->version, true );
+		wp_enqueue_script( 'wsuwp-youtube-embed', plugins_url( '/js/video.min.js', dirname( __FILE__ ) ), array( 'jquery' ), $this->version, true );
 
 		return $content;
 	}
