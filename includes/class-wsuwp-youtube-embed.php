@@ -61,6 +61,7 @@ class WSUWP_YouTube_Embed {
 			'rel' => 0,
 			'showinfo' => 0,
 			'start' => 0,
+			'volume' => 'default',
 		);
 
 		$atts = shortcode_atts( $defaults, $atts );
@@ -85,7 +86,8 @@ class WSUWP_YouTube_Embed {
 				     data-video-playsinline="<?php echo absint( $atts['playsinline'] ); ?>"
 				     data-video-rel="<?php echo absint( $atts['rel'] ); ?>"
 				     data-video-showinfo="<?php echo absint( $atts['showinfo'] ); ?>"
-				     data-video-start="<?php echo absint( $atts['start'] ); ?>"></div>
+				     data-video-start="<?php echo absint( $atts['start'] ); ?>"
+				     data-video-volume="<?php echo esc_attr( $atts['volume'] ); ?>"></div>
 			</div>
 		</div>
 		<!-- End wsuwp_youtube embed. -->
@@ -104,20 +106,19 @@ class WSUWP_YouTube_Embed {
 	 *
 	 * @param string|int $value
 	 * @param string     $key
-	 *
-	 * @return int|string
 	 */
-	public function sanitize_atts( $value, $key ) {
+	public function sanitize_atts( &$value, $key ) {
 		if ( 'video_id' === $key ) {
-			return sanitize_text_field( $value );
+			$value = sanitize_text_field( $value );
 		} elseif ( in_array( $key, array( 'width', 'height', 'start', 'end' ), true ) ) {
-			return absint( $value );
+			$value = absint( $value );
+		} elseif ( 'volume' === $key && in_array( $value, array( 'default', 'mute' ), true ) ) {
+			return; // value remains the same.
 		} else {
 			$value = absint( $value );
 			if ( 1 < $value ) {
-				return 0;
+				$value = 0;
 			}
-			return $value;
 		}
 	}
 }

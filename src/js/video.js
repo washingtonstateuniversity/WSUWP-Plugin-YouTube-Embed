@@ -1,4 +1,4 @@
-/* global YT */
+/* global YT, onPlayerReady */
 ( function( $, window ) {
 	/**
 	 * Create a script element to load in the YouTube iFrame API and insert it
@@ -49,9 +49,28 @@
 					rel: video_rel,
 					showinfo: video_showinfo,
 					start: video_start
+				},
+				events: {
+					"onReady": onPlayerReady
 				}
 			} );
 		} );
+	};
+
+	/**
+	 * Handles custom behavior when the player is ready.
+	 *
+	 * @param event
+	 */
+	window.onPlayerReady = function( event ) {
+		var volume = $( event.target.h ).data( "video-volume" );
+		if ( "default" === volume ) {
+			return;
+		} else if ( "mute" === volume ) {
+			event.target.mute();
+		} else {
+			event.target.setVolume( volume );
+		}
 	};
 
 	/**
