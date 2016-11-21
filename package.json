@@ -4,9 +4,6 @@
   "version": "0.0.1",
   "license": "GPL-2.0+",
   "author": "Washington State University",
-  "contributors": [
-    { "name": "jeremyfelt" }
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/washingtonstateuniversity/wsuwp-plugin-youtube-embed"
