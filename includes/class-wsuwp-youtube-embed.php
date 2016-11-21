@@ -2,6 +2,8 @@
 
 class WSUWP_YouTube_Embed {
 	/**
+	 * @since 0.1.1
+	 *
 	 * @var WSUWP_YouTube_Embed
 	 */
 	private static $instance;
@@ -9,12 +11,14 @@ class WSUWP_YouTube_Embed {
 	/**
 	 * Tracks the version number of the plugin for script enqueues.
 	 *
+	 * @since 0.0.1
+	 *
 	 * @var string
 	 */
 	public $version = '0.0.1';
 
 	/**
-	 * Maintain and return the one instance. Initiate hooks when
+	 * Maintains and returns the one instance. Initiates hooks when
 	 * called the first time.
 	 *
 	 * @since 0.0.1
@@ -30,7 +34,7 @@ class WSUWP_YouTube_Embed {
 	}
 
 	/**
-	 * Setup hooks to include.
+	 * Adds hooks.
 	 *
 	 * @since 0.0.1
 	 */
@@ -39,7 +43,7 @@ class WSUWP_YouTube_Embed {
 	}
 
 	/**
-	 * Display the HTML associated with the `wsuwp_youtube` shortcode.
+	 * Displays the HTML associated with the `wsuwp_youtube` shortcode.
 	 *
 	 * @since 0.0.1
 	 *
@@ -101,8 +105,10 @@ class WSUWP_YouTube_Embed {
 	}
 
 	/**
-	 * Sanitize the attributes passed to the shortcode based on the
+	 * Sanitizes the attributes passed to the shortcode based on the
 	 * expectations of each key.
+	 *
+	 * @since 0.0.1
 	 *
 	 * @param string|int $value
 	 * @param string     $key

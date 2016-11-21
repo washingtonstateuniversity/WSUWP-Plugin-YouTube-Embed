@@ -18,7 +18,9 @@ require dirname( __FILE__ ) . '/includes/class-wsuwp-youtube-embed.php';
 
 add_action( 'after_setup_theme', 'WSUWP_YouTube_Embed' );
 /**
- * Start things up.
+ * Starts things up.
+ *
+ * @since 0.0.1
  *
  * @return \WSUWP_YouTube_Embed
  */
