@@ -76,7 +76,7 @@ class WSUWP_YouTube_Embed {
 		?>
 		<!-- Embedded with wsuwp_youtube shortcode. -->
 		<div class="wsuwp-youtube-wrap-outer">
-			<div class="wuswp-youtube-wrap-inner">
+			<div class="wsuwp-youtube-wrap-inner">
 				<div class="wsuwp-youtube-embed"
 				     id="wsuwp-youtube-video-<?php echo esc_attr( $atts['video_id'] ); ?>"
 				     data-video-id="<?php echo esc_attr( $atts['video_id'] ); ?>"
