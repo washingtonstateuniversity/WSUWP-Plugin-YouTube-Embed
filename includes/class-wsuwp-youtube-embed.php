@@ -15,7 +15,7 @@ class WSUWP_YouTube_Embed {
 	 *
 	 * @var string
 	 */
-	public $version = '0.0.1';
+	public $version = '0.0.2';
 
 	/**
 	 * Maintains and returns the one instance. Initiates hooks when
