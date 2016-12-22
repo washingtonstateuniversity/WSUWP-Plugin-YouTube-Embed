@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+* Fix inner wrapper class name typo.
+
 ## 0.0.1
 
 * Initial plugin release.

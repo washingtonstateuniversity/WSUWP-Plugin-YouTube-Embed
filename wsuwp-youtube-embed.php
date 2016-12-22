@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WSUWP YouTube Embed
-Version: 0.0.1
+Version: 0.0.2
 Description: Embed YouTube videos using the YouTube JS API
 Author: washingtonstateuniversity, jeremyfelt
 Author URI: https://web.wsu.edu/
